@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Mockup</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .wrapper {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .card {
+        background-color: #fff;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        padding: 20px;
+        max-width: 100%;
+        width: 400px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #757171;
+        padding: 10px;
+      }
+
+      .header h2 {
+        font-weight: 600;
+        flex-grow: 1;
+        text-align: center;
+      }
+
+      .restaurant-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .restaurant-header h3 {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .restaurant div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .restaurant div:last-child {
+        border-bottom: none;
+      }
+
+      .offer {
+        background-color: #fff8e1;
+        color: #8a6d3b;
+        border: 1px solid #fbeed5;
+        padding: 10px;
+        text-align: center;
+        border-radius: 6px;
+        margin-bottom: 15px;
+      }
+
+      .summary {
+        margin-top: 10px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+      }
+
+      .summary div {
+        display: flex;
+        margin-bottom: 5px;
+      }
+
+      .summary span {
+        display: flex;
+      }
+
+      .summary hr {
+        border: none;
+        height: 1px;
+        background-color: #ddd;
+        margin: 10px 0;
+      }
+
+      .checkout-btn {
+        width: 150px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 10px;
+        margin-left: 100px;
+      }
+
+      .profile {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .profile img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .profile h3 {
+        color: orangered;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px 0;
+      }
+
+      .tabs span {
+        cursor: pointer;
+      }
+
+      .tabs .active {
+        font-weight: bold;
+        border-bottom: 2px solid black;
+      }
+
+      .orders div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .orders div:last-child {
+        border-bottom: none;
+      }
+
+      .status-success {
+        color: green;
+      }
+
+      .status-failure {
+        color: rgb(255, 166, 0);
+      }
+
+      .status-warning {
+        color: orange;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="card">
+        <div class="header">
+          <span>&#x2190;</span>
+          <h2>Your Cart</h2>
+          <span>+</span>
+        </div>
+
+        <div class="restaurant">
+          <div class="restaurant-header">
+            <h3>THE FUSION KITCHEN</h3>
+            <span>x</span>
+          </div>
+          <div>
+            <span>Veg. Seekh Kebab (Dry)</span>
+            <div>
+              <span>-</span>
+              <span>1</span>
+              <span>+</span>
+            </div>
+            <span>$9.50</span>
+          </div>
+        </div>
+
+        <div class="restaurant">
+          <div class="restaurant-header">
+            <h3>SMOKEY'S PIZZA</h3>
+            <span>x</span>
+          </div>
+          <div>
+            <span>Cheese Pepperoni<br />(Large - 12" - 8 slices)</span>
+            <div>
+              <span>-</span>
+              <span>1</span>
+              <span>+</span>
+            </div>
+            <span>$9.50</span>
+          </div>
+          <div>
+            <span>Coca-Cola(5 liter)</span>
+            <div>
+              <span>-</span>
+              <span>1</span>
+              <span>+</span>
+            </div>
+            <span>$4.75</span>
+          </div>
+        </div>
+
+        <div class="offer">
+          Spl. Offer: Get free home delivery on orders over $50
+        </div>
+
+        <div class="summary">
+          <div><span>Subtotal:</span><span>$48.75</span></div>
+          <div><span>Taxes:</span><span>$4.10</span></div>
+          <div><span>Delivery Charge:</span><span>$7.00</span></div>
+          <hr />
+          <div><strong>Total:</strong><strong>$59.85</strong></div>
+        </div>
+
+        <button class="checkout-btn">CHECKOUT</button>
+      </div>
+
+      <div class="card">
+        <div class="header">
+          <span>&#x2190;</span>
+          <h2>My Account</h2>
+          <span>EDIT</span>
+        </div>
+
+        <div class="profile">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+            alt="Profile Picture"
+          />
+          <h3>MARK WEINS</h3>
+          <p>Traveller, adventurer & foodie!</p>
+        </div>
+
+        <div class="tabs">
+          <span>MY PROFILE</span>
+          <span>MY FAVORITES</span>
+          <span class="active">PREVIOUS ORDERS</span>
+        </div>
+
+        <div class="orders">
+          <div>
+            <span>ORDER ID</span>
+            <span>DATE</span>
+            <span>STATUS</span>
+            <span>TOTAL</span>
+            <span>ACTIONS</span>
+          </div>
+          <div>
+            <span>294138</span>
+            <span>29 Sep</span>
+            <span class="status-success">&#x2611;</span>
+            <span>$58.85</span>
+            <div class="actions">
+              <span>&#x21bb;</span>
+              <span>&#x2764;</span>
+            </div>
+          </div>
+          <div>
+            <span>263172</span>
+            <span>15 Sep</span>
+            <span class="status-success">&#x2611;</span>
+            <span>$42.10</span>
+            <div class="actions">
+              <span>&#x21bb;</span>
+              <span>&#x2764;</span>
+            </div>
+          </div>
+          <div>
+            <span>253983</span>
+            <span>23 Aug</span>
+            <span class="status-failure">&#x26A0;</span>
+            <span>$52.50</span>
+            <div class="actions">
+              <span>&#x21bb;</span>
+              <span>&#x2764;</span>
+            </div>
+          </div>
+          <div>
+            <span>247612</span>
+            <span>19 Jul</span>
+            <span class="status-success">&#x2611;</span>
+            <span>$65.00</span>
+            <div class="actions">
+              <span>&#x21bb;</span>
+              <span>&#x2764;</span>
+            </div>
+          </div>
+          <div>
+            <span>238745</span>
+            <span>10 Jun</span>
+            <span class="status-success">&#x2611;</span>
+            <span>$36.00</span>
+            <div class="actions">
+              <span>&#x21bb;</span>
+              <span>&#x2764;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
